@@ -249,7 +249,7 @@ set SELECTED_COMPILER_VERSION=90
 goto oc_msvc
 
 :oc_msvc10
-echo Setting compiler: Microsoft Visual C++ 2008
+echo Setting compiler: Microsoft Visual C++ 2010
 echo COMPILER_NAME=vc10 >> build\Makefiles\nmake\config.mak
 set SELECTED_COMPILER_VERSION=100
 goto oc_msvc

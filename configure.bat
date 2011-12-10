@@ -111,6 +111,7 @@ echo    msvc7    Microsoft Visual C++ .NET 2002
 echo    msvc71   Microsoft Visual C++ .NET 2003
 echo    msvc8    Microsoft Visual C++ 2005
 echo    msvc9    Microsoft Visual C++ 2008
+echo    msvc10   Microsoft Visual C++ 2010
 echo    icl      Intel C++ Compiler
 echo    evc3     Microsoft eMbedded Visual C++ 3 (*)
 echo    evc4     Microsoft eMbedded Visual C++ .NET (*)
@@ -203,6 +204,7 @@ if "%1" == "msvc71" goto oc_msv71
 if "%1" == "msvc7" goto oc_msvc7
 if "%1" == "msvc8" goto oc_msvc8
 if "%1" == "msvc9" goto oc_msvc9
+if "%1" == "msvc10" goto oc_msvc10
 if "%1" == "icl"   goto oc_icl
 
 if "%1" == "evc3" goto oc_evc3
@@ -244,6 +246,12 @@ goto oc_msvc
 echo Setting compiler: Microsoft Visual C++ 2008
 echo COMPILER_NAME=vc9 >> build\Makefiles\nmake\config.mak
 set SELECTED_COMPILER_VERSION=90
+goto oc_msvc
+
+:oc_msvc10
+echo Setting compiler: Microsoft Visual C++ 2008
+echo COMPILER_NAME=vc10 >> build\Makefiles\nmake\config.mak
+set SELECTED_COMPILER_VERSION=100
 goto oc_msvc
 
 :oc_msvc
